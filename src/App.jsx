@@ -40,7 +40,7 @@ const App = () => {
             <div className="progress w-1/2 h-full flex items-center justify-center relative">
               <svg width="100%" height="100%" className='absolute' viewBox="0 0 100 100">
                 <circle r="40" cx='50' cy='50' fill="transparent" stroke="#e0e0e0" strokeWidth="12px"></circle>
-                <circle r="40" cx='50' cy='50' fill="transparent" stroke="crimson" strokeWidth="12px" strokeDasharray="251.1px" strokeDashoffset="62.775px"></circle>
+                <circle r="40" cx='50' cy='50' fill="transparent" stroke="crimson" strokeWidth="12px" strokeDasharray={`${(tasks.filter(task => task.completed === true).length/tasks.length)*252} 252`} ></circle>
               </svg>
               <h1 className='text-2xl font-medium text-white'>{tasks.filter(task=>task.completed===true).length}/{tasks.length}</h1>
             </div>
