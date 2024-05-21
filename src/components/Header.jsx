@@ -1,9 +1,11 @@
-import { React, useRef } from 'react'
+import { React, useContext, useRef } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { taskcontext } from '../Context/TaskContext'
 
 
-const Header = ({ tasks }) => {
+const Header = () => {
+    const [tasks] = useContext(taskcontext)
 
 
     const fillCircle = useRef()

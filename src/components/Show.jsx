@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { taskcontext } from '../Context/TaskContext'
 
-const Show = ({tasks,setTasks}) => {
+const Show = () => {
+  const [tasks,setTasks]= useContext(taskcontext)
+
 
     
   const toggleStatus = (index) => {
