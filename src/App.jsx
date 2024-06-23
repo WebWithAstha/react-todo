@@ -14,8 +14,8 @@ const App = () => {
 
   return (
     <>
-      <div className="main font-mono flex items-center bg-black justify-center h-screen w-full p-10">
-        <div className="left w-1/2 h-full flex flex-col gap-10 items-center justify-center">
+      <div className="main font-mono flex lg:flex-row flex-col items-center bg-zinc-300 justify-center min-h-screen w-full p-10">
+        <div className="left lg:w-1/2 w-full h-full flex flex-col gap-10 items-center justify-center">
           <Header />
           <Create />
         </div>

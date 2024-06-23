@@ -24,19 +24,21 @@ const Show = () => {
 
 
   return (
-    <div className="right w-1/3 h-full flex flex-col items-center justify-center gap-4">
-          <h1 className='text-white w-full text-3xl font-medium mb-4 text-center'>Tasks</h1>
-          <div className="tasks w-full flex flex-col rounded-lg gap-2 bg-zinc-800/90 p-2">
+    <div className="right lg:w-2/3 w-full md:w-[40rem] mt-10 lg:mt-0 h-full flex flex-col items-center justify-center gap-4">
+          <div className="w-full flex flex-col rounded-lg bg-zinc-200 p-4">
+          <h1 className='w-full text-3xl font-bold mb-4 text-center'>Tasks</h1>
+          <div className="tasks w-full flex flex-col rounded-lg gap-3 p-2 py-6">
             {tasks.length>0?tasks.map((e,index) => {
               return (
-                <div key={e.id} className="task flex items-center bg-zinc-900 justify-between rounded-full px-4 py-2 gap-2">
-                  <i onClick={()=>toggleStatus(index)} id={e.id} className={e.completed?`ri-circle-fill text-sky-300 text-2xl`:`ri-circle-line text-white text-2xl`}></i><h1 className='text-white text-xl w-full '>{e.task}</h1>
-                  <i onClick={()=>(handleDelete(index))} className='ri-close-fill text-white'></i>
+                <div key={e.id} className="task flex items-center bg-zinc-200 shadow-lg justify-between rounded-full px-4 py-2 gap-2">
+                  <i onClick={()=>toggleStatus(index)} id={e.id} className={e.completed?`ri-circle-fill text-sky-300 text-2xl`:`ri-circle-line text-2xl`}></i><h1 className=' text-xl w-full '>{e.task}</h1>
+                  <i onClick={()=>(handleDelete(index))} className='ri-close-fill'></i>
                 </div>
               )
             
             }):<h1 className="text-red-600 text-3xl font-bold text-center">No tasks.</h1>}
           </div>
+            </div>
 
         </div>
   )
